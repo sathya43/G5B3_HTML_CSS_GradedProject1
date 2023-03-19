@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Test Form</title>
+    <style>
+      .input_fields {
+        height: 5%;
+        width: 20%;
+        border: none;
+        margin: 5px;
+        outline: none;
+        border-bottom: 2px solid lightgrey;
+      }
+
+      select,
+      h3 {
+        margin: 5px;
+      }
+
+      button {
+        color: white;
+        font-size: 18px;
+        border: none;
+        border-radius: 2px;
+        height: 30px;
+        width: 80px;
+        margin: 15px;
+        padding: 5px;
+        cursor: pointer;
+        background-color: #af66f2;
+      }
+      .blocks {
+        display: inline-block;
+      }
+      img {
+        left: 50%;
+        height: 100%;
+      }
+      #block1 {
+        float: left;
+        width: 40%;
+        height: 100%;
+        block-size: fit-content;
+      }
+      #block2 {
+        float: right;
+        left: 40%;
+        width: auto;
+        height: 100%;
+        position: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="width: 100%">
+      <div id="block1">
+        <form action="">
+          <div>
+            <h1>1. Your Contact Details</h1>
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              required
+              class="input_fields"
+            />
+            <input
+              type="number"
+              name="patientid"
+              min="0000"
+              max="9999"
+              placeholder="Patient ID (if exists)"
+              required
+              class="input_fields"
+            />
+
+            <br />
+
+            <input
+              type="number"
+              name="contact_no"
+              placeholder="Contact Number"
+              min="6000000000"
+              max="9999999999"
+              required
+              class="input_fields"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="email"
+              required
+              class="input_fields"
+            />
+          </div>
+          <div>
+            <h1>2. Address</h1>
+
+            <input
+              type="number"
+              name="H.No"
+              min="0000"
+              max="9999"
+              placeholder="H.No"
+              required
+              class="input_fields"
+            />
+
+            <input
+              type="text"
+              name="Street"
+              placeholder="Street"
+              required
+              class="input_fields"
+            />
+
+            <br />
+
+            <input
+              type="text"
+              name="Area"
+              placeholder="Area"
+              required
+              class="input_fields"
+            />
+
+            <br />
+            <h3>District</h3>
+            <select name="district" id="">
+              <option value="">Choose</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Mangaluru">Mangalore</option>
+              <option value="Nanded">Nanded</option>
+            </select>
+
+            <h1>3. Select Test Type</h1>
+
+            <div>
+              <input type="checkbox" name="CBC" id="CBC" />
+              <label for="CBC">CBC</label>
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                name="Complete Urine"
+                id="Complete Urine"
+              />
+              <label for="Complete Urine">Complete Urine</label>
+            </div>
+            <div>
+              <input type="checkbox" name="Lipid Profile" id="Lipid Profile" />
+              <label for="Lipid Profile">Lipid Profile</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="Thyroid Stimulating Hormone"
+                id="Thyroid Stimulating Hormone"
+              />
+              <label for="Thyroid Stimulating Hormone"
+                >Thyroid Stimulating Hormone</label
+              >
+            </div>
+            <div>
+              <input type="checkbox" name="Glucose Test" id="Glucose Test" />
+              <label for="Glucose Test">Glucose Test</label>
+            </div>
+
+            <div>
+              <h2>4. Do you want hard copy of report?</h2>
+              <input type="radio" id="yes" value="yes" name="need_copy" />
+              <label for="yes">yes</label>
+
+              <input type="radio" id="no" value="no" name="need_copy" />
+              <label for="no">no</label>
+            </div>
+
+            <div>
+              <label for="preferredTime">
+                <h2>5. Select Preferred (date and time):</h2></label
+              >
+              <input
+                type="datetime-local"
+                id="preferredTime"
+                name="preferredTime"
+              />
+            </div>
+          </div>
+          <div>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div id="block2">
+        <img src="Images/Lab-Test/lab-test.jpg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
